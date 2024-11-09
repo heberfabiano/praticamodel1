@@ -1,0 +1,44 @@
+<mvc:View controllerName="mentoria.fiori.ka.praticamodel1.controller.View"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="idPage" title="{i18n>title}">
+
+        <Table id="idTable" items="{ path: '/dataTable' }">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <content>
+                        <ToolbarSpacer width="90%"/>
+                        <Button text="NOVO" press="onNew"></Button>
+                    </content>
+                </OverflowToolbar>
+            </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="Nome" />
+                </Column>
+                <Column>
+                    <Text text="Idade" />
+                </Column>
+                <Column>
+                    <Text text="Sexo" />
+                </Column>
+                <Column>
+                    <Text text="Altura" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{nome}" />
+                        <Text text="{path: 'dtNasc', formatter: '.formatIdade'}"/>
+<!--                         <Text text="{sexo}" /> -->
+                        <ObjectStatus text="{path: 'sexo', formatter: '.formatSexoText'}" icon="{path: 'sexo', formatter: '.formatSexoIcon'}" inverted="true" active="true" state="{path: 'sexo', formatter: '.formatSexoState'}"/>
+                        <Text text="{altura}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+
+        </Table>
+
+    </Page>
+</mvc:View>
