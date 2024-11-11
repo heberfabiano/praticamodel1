@@ -31,9 +31,8 @@
                     <cells>
                         <Text text="{nome}" />
                         <Text text="{path: 'dtNasc', formatter: '.formatIdade'}"/>
-<!--                         <Text text="{sexo}" /> -->
                         <ObjectStatus text="{path: 'sexo', formatter: '.formatSexoText'}" icon="{path: 'sexo', formatter: '.formatSexoIcon'}" inverted="true" active="true" state="{path: 'sexo', formatter: '.formatSexoState'}"/>
-                        <Text text="{altura}" />
+                        <Text text="{path:'altura', type:'sap.ui.model.type.Float', formatOptions: {decimals: 2, decimalSeparator: ','}}" />
                     </cells>
                 </ColumnListItem>
             </items>

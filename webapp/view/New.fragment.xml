@@ -2,26 +2,26 @@
     xmlns="sap.m"
     xmlns:c="sap.ui.core">
 
-    <Dialog id="idNewDialog" binding="{/dataForm}" >
+    <Dialog id="idNewDialog" binding="{/dataForm}">
         <form:SimpleForm id="idFormNew" editable="true" layout="ResponsiveGridLayout">
             <form:content>
 
                 <Label text="Nome" textAlign="Center" />
-                <Input id="idNome"></Input>
+                <Input id="idNome" required="true"></Input>
 
                 <Label text="Dt. Nasc." textAlign="Center" />
-                <DatePicker id="idDtNasc"></DatePicker>
+                <DatePicker id="idDtNasc" required="true"></DatePicker>
 
                 <Label text="Sexo" textAlign="Center" />
-                <SegmentedButton id="idSexo" selectedKey="M" class="sapUiSmallMarginBottom" width="100%">
+                <SegmentedButton id="idSexo" selectedKey="M" class="sapUiSmallMarginBottom" width="100%" >
                     <items>
                         <SegmentedButtonItem text="M" key="M"/>
                         <SegmentedButtonItem text="F" key="F" />
                     </items>
                 </SegmentedButton>
 
-                <Label text="Altura" textAlign="Center" />
-                <Input id="idAltura" value="{path:'', type:'sap.ui.model.type.Float'}"></Input>
+                <Label text="Altura (cm)" textAlign="Center" />
+                <Input id="idAltura" required="true" value="{path:'dataForm>altura', type:'sap.ui.model.type.Float', formatOptions: {decimals: 2, decimalSeparator: ','}}"></Input>
 
             </form:content>
         </form:SimpleForm>
